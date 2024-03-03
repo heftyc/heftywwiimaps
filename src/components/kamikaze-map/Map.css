@@ -1,0 +1,10 @@
+.map-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    vertical-align: center;
+    width: "98vw";
+    height: "92vh";
+    left: 0;
+    right: 0;
+  }

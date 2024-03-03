@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&family=Lilita+One&family=Outfit:wght@629&family=Saira+Stencil+One&family=Sixtyfour&display=swap');
+
+.geologica-bold{
+    font-family: "Geologica", sans-serif;
+    font-weight: 800;
+  }
+  
+ .geologica{
+    font-family: "Geologica", sans-serif;
+    font-weight: 400;
+}
+
+:root{
+    --primary-color: #1a202e;
+    --secondary-color:#c6c6c6;
+    
+    --background-color: #dddddd;
+
+    --highlight-color:#efefef;
+
+    --home-width: 60%;
+    --home-margain-a:3%;
+    --home-margain-b:2%;
+
+    --primary-font:Geologica;
+}
+
+html{
+    background-color: var(--background-color);
+    height: 100%;
+}
+
+body{
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.home-site-logo{
+    height: 60px;
+}
+
+.head-banner{
+    color: white;
+    display: flex;
+    gap: 0.4em;
+    align-items:center;
+    justify-content: start;
+    
+    background-color: var(--primary-color);
+    padding: 0.4em;
+    font-size: 37px;
+    font-family: var(--primary-font);
+    font-weight: bold;
+}
+
+.welcome-container{
+    width: var(--home-width);
+    margin: var(--home-margain-a) auto;
+}
+.welcome{
+    margin: var(--home-margain-a) auto;
+    text-align: center;
+    font-size: 40px;
+    font-family: var(--primary-font);
+
+}
+.welcome-desc{
+    margin: var(--home-margain-b) auto;
+    width: var(--home-width);
+    text-align: center;
+    font-size: larger;
+    border-radius: 7px;
+    background-color: var(--secondary-color);
+    padding: 20px;
+}
+
+.maps-header{
+    margin:  auto;
+    width: var(--home-width);
+    font-family: var(--primary-font);
+    font-size: 35px;
+}
+
+.map-panel{
+    border: solid 3px black;
+    width: var(--home-width);
+    margin: 30px auto;
+    display: flex;
+    color: inherit;
+    background-color: var(--secondary-color);
+    text-decoration: none;
+}
+.map-panel:visited{
+    color: inherit;
+}
+.map-panel:hover{
+    background-color: var(--highlight-color);
+    border-color: var(--primary-color);
+}
+
+.map-title{
+    font-size: 26px;
+    padding-bottom: 5px;
+    font-family: var(--primary-font);
+}
+.map-label{
+   flex:3;
+   padding: 10px;
+}
+
+.map-icon{
+    width: 12em;
+    flex:1;
+}
+
+.more-maps{
+    padding: 10px;
+    text-align: center;
+    color: gray;
+}
+
+footer{
+    position: fixed;
+    left: bottom;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 20px 0px 20px 0px;
+    text-align: center;
+}
+
+.header{
+    color: black;
+    background: rgba(128, 128, 128, 0.163);
+    text-align: center;
+    font-size: large;
+    width: 50%;
+    margin: auto;
+    padding: 3em;
+}

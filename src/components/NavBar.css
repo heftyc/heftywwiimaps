@@ -1,0 +1,41 @@
+.navBar{
+    background-color:var(--primary-color);
+    z-index: 1;
+    display: flex;
+
+    align-items:center;
+    justify-content: start;
+    
+   
+    float:left;
+    font-family: var(--primary-font);
+    color: white;
+    height: 100%;
+    text-align: center;
+}
+
+.page-title{
+    display: flex;
+    gap: 0.5em;
+    padding: 0.5em;
+    
+    font-family: var(--primary-font);
+    font-size: 20px;
+    text-align: center;
+    align-items:center;
+}
+
+.site-logo{
+    width: 3.5em;
+}
+
+.about {
+    margin-left:auto;
+    align-self:flex-end;
+    float:right;
+    color: black;
+    height: 100%;
+    border: 1px black;
+    border-radius: 0px;
+    background-color: #f0f0f0;
+}

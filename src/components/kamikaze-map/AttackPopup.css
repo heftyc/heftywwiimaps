@@ -1,0 +1,44 @@
+* {
+    font-size: 15px;
+    margin: inherit auto;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+.flag{
+    height: 19px;
+    padding-right: 5px;
+}
+.target-name{
+    font-size: 30px;
+}
+.target-type{
+    font-size: 20px;
+}
+.fate-sunk, .fate-damaged{
+    font-size: 20px;
+    padding: 0.15em 0em;
+}
+
+.fate-sunk{
+    background-color: red;
+    color: white;
+}
+.fate-damaged{
+    background-color: black;
+    color: white;
+}
+
+.sources > *{
+    font-size: 13px;
+}
+
+a {
+    color: blue;
+    text-decoration: underline;
+  }
+  
+  a:visited {
+    color: purple;
+  }
+  
