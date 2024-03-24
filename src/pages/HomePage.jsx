@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./HomePage.css";
 import HeadBanner from "../components/HeadBanner";
 import PageFooter from "../components/PageFooter";
+
 function HomePage() {
   return (
     <div>

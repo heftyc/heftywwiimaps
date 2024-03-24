@@ -15,12 +15,13 @@ const Map = () => {
     const map = new mapboxgl.Map({
       container: mapContainerRef.current,
       style: import.meta.env.VITE_MAPBOX_STYLE_ID,
-      center: [118.966159, 24.021842],
-      zoom: 4.1,
-      minZoom: 2,
+      center: [131, 26],
+      //zoom: 4.1,
+      //maxZoom: 2.0,
+      //minZoom: 1.4,
       maxBounds: [
-        [-179, -89],
-        [179, 89],
+        [70, -40],
+        [180, 60],
       ],
     });
     const scaleControl = new mapboxgl.ScaleControl({

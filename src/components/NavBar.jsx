@@ -1,6 +1,6 @@
 import React, { useRef, useEffect, useState } from "react";
 import "./NavBar.css";
-
+import siteLogo from "../assets/images/war-maps-logo.png";
 function NavBar({ onButtonClicked }) {
   const [buttonText, setButtonText] = useState("About This Map");
 
@@ -15,10 +15,7 @@ function NavBar({ onButtonClicked }) {
     <div className="navBar" style={{ width: "100vw", height: "6vh" }}>
       <div className="page-title">
         <a href="/" className="home-link">
-          <img
-            className="site-logo"
-            src="src\assets\images\war maps logo.png"
-          />
+          <img className="site-logo" src={siteLogo} />
         </a>
         Kamikaze Hits on Allied Ships
       </div>
