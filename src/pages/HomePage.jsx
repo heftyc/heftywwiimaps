@@ -26,10 +26,10 @@ function HomePage() {
             <div className="map-desc">
               From October of 1944 until the end of the war in August 1945, the
               Japanese military used suicide aircraft tactics against Allied
-              ships in the Pacific. While many thousand of these attacks were
-              launched, only around 400 dealt any damage. This map gives the
-              location and details of these instances where a kamikaze attack
-              succesfully damaged a ship.
+              ships in the Pacific. Out of many thousand of these attacks that
+              were launched, approximately 400 dealt damage to the intended
+              target. This map gives the location and details of these instances
+              where a kamikaze attack succesfully damaged a ship.
             </div>
           </div>
         </a>
