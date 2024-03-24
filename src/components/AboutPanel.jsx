@@ -140,6 +140,7 @@ const AboutPanel = ({ aboutToggled }) => {
         berths of other harbors at Okinawa or the Philippines, please reach out
         to me.{" "}
       </p>
+      <p id="bottom-padding"></p>
     </div>
   );
 };

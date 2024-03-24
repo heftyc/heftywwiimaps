@@ -28,19 +28,31 @@ function HomePage() {
           <div className="map-label">
             <div className="map-title">Kamikaze Hits on Allied Ships</div>
             <div className="map-desc">
-              From October of 1944 to the end of the war in August 1945, the
+              From October of 1944 until the end of the war in August 1945, the
               Japanese military used suicide aircraft tactics against Allied
-              shipping. This map gives the location and details of every
-              instance where one of these attacks succesfully damaged a ship.
+              ships in the Pacific. While many thousand of these attacks were
+              launched, only around 400 dealt any damage. This map gives the
+              location and details of these instances where a kamikaze attack
+              succesfully damaged a ship.
             </div>
           </div>
         </a>
         <div className="more-maps">More maps coming soon.</div>
+        <div className="spacer" />
+        <footer>
+          <div>© 2024 Caleb Hefty</div>
+          <div>
+            Source Code available{" "}
+            <a
+              className="light-link"
+              href="https://github.com/heftyc/heftywwiimaps"
+            >
+              here
+            </a>{" "}
+            under the MIT License | Images available in the public domain
+          </div>
+        </footer>
       </body>
-      <footer>
-        <div>© 2024 Caleb Hefty</div>
-        <div>Source Code | Images available in the public domain</div>
-      </footer>
     </div>
   );
 }

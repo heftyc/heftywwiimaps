@@ -130,7 +130,17 @@ footer{
     text-align: center;
 }
 
-.header{
+.spacer{
+    height: 120px;
+}
+
+.light-link{
+    color: aquamarine;
+}
+.light-link:visited{
+    color:rgb(176, 131, 199);
+}
+/*.header{
     color: black;
     background: rgba(128, 128, 128, 0.163);
     text-align: center;
@@ -138,4 +148,4 @@ footer{
     width: 50%;
     margin: auto;
     padding: 3em;
-}
+}*/

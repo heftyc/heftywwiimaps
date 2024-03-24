@@ -10,6 +10,10 @@
     padding-right: 1%;
     text-align: left;
   }
+  
+  #bottom-padding{
+    padding-bottom: 1em;
+  }
 
   .panel-content {
     padding: 20px;
