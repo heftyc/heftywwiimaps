@@ -1,16 +1,12 @@
 import React, { useState } from "react";
 import "./HomePage.css";
+import HeadBanner from "../components/HeadBanner";
+import PageFooter from "../components/PageFooter";
 function HomePage() {
   return (
     <div>
-      <div className="head-banner">
-        <img
-          className="home-site-logo"
-          src="src\assets\images\war maps logo.png"
-        />
-        Hefty WWII Maps
-      </div>
-      <body>
+      <HeadBanner />
+      <div className="home-body">
         <div className="welcome">Welcome to Hefty WWII Maps</div>
         <div className="welcome-container">
           <div className="welcome-desc">
@@ -39,20 +35,8 @@ function HomePage() {
         </a>
         <div className="more-maps">More maps coming soon.</div>
         <div className="spacer" />
-        <footer>
-          <div>© 2024 Caleb Hefty</div>
-          <div>
-            Source Code available{" "}
-            <a
-              className="light-link"
-              href="https://github.com/heftyc/heftywwiimaps"
-            >
-              here
-            </a>{" "}
-            under the MIT License | Images available in the public domain
-          </div>
-        </footer>
-      </body>
+      </div>
+      <PageFooter />
     </div>
   );
 }

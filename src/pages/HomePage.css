@@ -30,7 +30,7 @@ html{
     height: 100%;
 }
 
-body{
+.home-body{
     overflow-x: hidden;
     overflow-y: auto;
 }
