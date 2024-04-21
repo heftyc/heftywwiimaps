@@ -26,13 +26,16 @@
 }
 
 .site-logo{
-    width: 3.5em;
+    height: 5.5vh;
+    width: auto;
 }
 
 .about {
     margin-left:auto;
     align-self:flex-end;
     float:right;
+
+    font-family: var(--primary-font);
     color: black;
     height: 100%;
     border: 1px black;

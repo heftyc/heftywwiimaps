@@ -8,8 +8,6 @@ const AboutPanel = ({ aboutToggled }) => {
       style={{
         position: "fixed",
         bottom: 0,
-        width: "30vw",
-        height: "94vh",
         display: aboutToggled ? "block" : "none",
       }}
     >
@@ -55,14 +53,23 @@ const AboutPanel = ({ aboutToggled }) => {
 
       <p>&copy; 2024 Caleb Hefty. Code licensed under the MIT License.</p>
       <p>
-        This map is built with <a href="https://react.dev/">React</a> and{" "}
-        <a href="https://www.mapbox.com/">Mapbox</a>. You can look at the source
-        code in its{" "}
-        <a href="https://github.com/heftyc/Kamikaze-Hits-Map">
+        This map is built with{" "}
+        <a href="https://react.dev/" target="_blank">
+          React
+        </a>{" "}
+        and{" "}
+        <a href="https://www.mapbox.com/" target="_blank">
+          Mapbox
+        </a>
+        . You can look at the source code in its{" "}
+        <a href="https://github.com/heftyc/Kamikaze-Hits-Map" target="_blank">
           GitHub repository
         </a>{" "}
         and look at the{" "}
-        <a href="https://docs.google.com/spreadsheets/d/1lCVeWthDCK-H_1LFkkHMGfZmyNYYr5mHq1ahN2rbiug/edit?usp=sharing">
+        <a
+          href="https://docs.google.com/spreadsheets/d/1lCVeWthDCK-H_1LFkkHMGfZmyNYYr5mHq1ahN2rbiug/edit?usp=sharing"
+          target="_blank"
+        >
           spreadsheet
         </a>{" "}
         for the map data.
@@ -73,19 +80,23 @@ const AboutPanel = ({ aboutToggled }) => {
         the plane only clipped the ship and damaged some equipment. Damaging
         near misses are also recorded, where the plane would miss its target but
         the explosion of the crash still inflicted damage. Complete misses,
-        which would be fate of a majority of kamikaze attacks, are not recorded.
-        Each datapoint represents the location of one ship getting hit by some
-        number of aircraft in one day. It was not uncommon for a ship to get hit
-        multiple times in one day, but the strikes were nearly always just
-        minutes apart as part of one attack.
+        which would be the fate of a majority of kamikaze attacks, are not
+        recorded. Each datapoint represents the location of one ship getting hit
+        by some number of aircraft in one day. It was not uncommon for a ship to
+        get hit multiple times in one day, but the strikes were nearly always
+        just minutes apart as part of one attack.
       </p>
       <p>
-        The data in this map is a major modification from the Wikipedia page{" "}
-        <a href="https://en.wikipedia.org/wiki/List_of_Allied_vessels_struck_by_Japanese_special_attack_weapons">
+        The data in this map is a major modification from the data found on the
+        Wikipedia page{" "}
+        <a
+          href="https://en.wikipedia.org/wiki/List_of_Allied_vessels_struck_by_Japanese_special_attack_weapons"
+          target="_blank"
+        >
           "List of Allied vessels struck by Japanese special attack weapons"
         </a>
         . Most of the records from this page are precise enough to display the
-        location without additional research. However for about 100 of the
+        location without additional research. However, for about 100 of the
         approximately 400 entries in the table, the given locations are merely
         descriptions of where the attack happened, or only precise to one degree
         of latitude and longitude. (Note that the area within one degree of
@@ -110,10 +121,15 @@ const AboutPanel = ({ aboutToggled }) => {
         ships' positions. In some cases, there are no coordinates available, but
         a report gives a good description of the location that I translate into
         approximate coordinates. The Notes column on the{" "}
-        <a href="https://docs.google.com/spreadsheets/d/1lCVeWthDCK-H_1LFkkHMGfZmyNYYr5mHq1ahN2rbiug/edit?usp=sharing">
+        <a
+          href="https://docs.google.com/spreadsheets/d/1lCVeWthDCK-H_1LFkkHMGfZmyNYYr5mHq1ahN2rbiug/edit?usp=sharing"
+          target="_blank"
+        >
           data spreadsheet
         </a>{" "}
-        may contain more on my reasoning for the location I give.
+        may contain more on my reasoning for the location I give. The data on
+        this map is still a work in progress, some entries may be inaccurate or
+        missing.
       </p>
 
       <p>
@@ -125,22 +141,18 @@ const AboutPanel = ({ aboutToggled }) => {
       </p>
 
       <p>
-        This map does not currently include the water-based suicide attacks
-        included in the Wikipedia article. I felt that they fell outside of the
-        scope of the map. Differentiating between different types of attacks
-        would also make the map harder to read. Ohka flying bomb attacks are
-        still included.
+        This map does not include the water-based suicide attacks included in
+        the Wikipedia article. I felt that they fell outside of the scope of the
+        map. Differentiating between different types of attacks would also make
+        the map harder to read. Ohka flying bomb attacks are still included.
       </p>
       <p>
-        There is some information that would help me improve the accuracy of the
-        locations for the ships. Many of the ships record that they were hit
-        while sitting at anchor in a particular berth, a "parking spot" in a
-        harbor. I have the chart showing the berths for Chimu Bay, Okinawa, but
-        I can't find any of the others. If you can point me to a diagram of the
-        berths of other harbors at Okinawa or the Philippines, please reach out
-        to me.{" "}
+        If you want to leave a question or comment, please reach out to me at{" "}
+        <u>heftywwiimaps@gmail.com</u>. If you have a chart showing the berths
+        for bays in the Philipines or Okinawa other than Chimu Bay, Okinawa,
+        these would be very helpful in inproving the accuracy for some of the
+        locations.{" "}
       </p>
-      <p id="bottom-padding"></p>
     </div>
   );
 };

@@ -7,3 +7,18 @@ body {
   padding: 0;
   vertical-align: center;
 }
+
+:root{
+  --primary-color: #1a202e;
+  --secondary-color:#c6c6c6;
+  
+  --background-color: #dddddd;
+
+  --highlight-color:#efefef;
+
+  --home-width: 90%;
+  --home-margain-a:3%;
+  --home-margain-b:2%;
+
+  --primary-font:Geologica;
+}

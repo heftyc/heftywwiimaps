@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./HomePage.css";
-import HeadBanner from "../components/HeadBanner";
-import PageFooter from "../components/PageFooter";
+import HeadBanner from "../components/home-page/HeadBanner";
+import PageFooter from "../components/home-page/PageFooter";
 function Page404() {
   return (
     <div>

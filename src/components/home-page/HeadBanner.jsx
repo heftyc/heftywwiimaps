@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import siteLogo from "../assets/images/war-maps-logo.png";
+import siteLogo from "../../assets/images/war-maps-logo.png";
+import "./HeadBanner.css";
 
 function HeadBanner() {
   return (

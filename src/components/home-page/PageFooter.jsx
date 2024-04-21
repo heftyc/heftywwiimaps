@@ -1,18 +1,18 @@
 import React, { useState } from "react";
+import "./PageFooter.css";
 
 function PageFooter() {
   return (
     <footer>
       <div>© 2024 Caleb Hefty</div>
       <div>
-        Source Code available{" "}
+        heftywwiimaps@gmail.com | Source Code available{" "}
         <a
           className="light-link"
           href="https://github.com/heftyc/heftywwiimaps"
         >
           here
-        </a>{" "}
-        under the MIT License | Images available in the public domain
+        </a>
       </div>
     </footer>
   );

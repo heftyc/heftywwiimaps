@@ -1,0 +1,17 @@
+.home-site-logo{
+    height: 60px;
+}
+
+.head-banner{
+    color: white;
+    display: flex;
+    gap: 0.4em;
+    align-items:center;
+    justify-content: start;
+    
+    background-color: var(--primary-color);
+    padding: 0.4em;
+    font-size: 37px;
+    font-family: var(--primary-font);
+    font-weight: bold;
+}

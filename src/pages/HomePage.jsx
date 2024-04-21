@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./HomePage.css";
-import HeadBanner from "../components/HeadBanner";
-import PageFooter from "../components/PageFooter";
+import HeadBanner from "../components/home-page/HeadBanner";
+import PageFooter from "../components/home-page/PageFooter";
 
 function HomePage() {
   return (
@@ -25,12 +25,13 @@ function HomePage() {
           <div className="map-label">
             <div className="map-title">Kamikaze Hits on Allied Ships</div>
             <div className="map-desc">
-              From October of 1944 until the end of the war in August 1945, the
+              From October 1944 until the end of the war in August 1945, the
               Japanese military used suicide aircraft tactics against Allied
-              ships in the Pacific. Out of many thousand of these attacks that
-              were launched, approximately 400 dealt damage to the intended
-              target. This map gives the location and details of these instances
-              where a kamikaze attack succesfully damaged a ship.
+              ships in the Pacific. Out of many thousand of these kamikaze
+              attacks that were launched, approximately 400 landed a hit on
+              their intended target. This map gives the location and details of
+              these instances where a kamikaze attack succesfully damaged a
+              ship.
             </div>
           </div>
         </a>

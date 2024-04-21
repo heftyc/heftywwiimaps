@@ -1,18 +1,17 @@
   .about-panel {
     left: 1;
     right: 0;
-    width: 300px;
+    
+    width: 30vw;
+    height: 94vh;
+
     background-color: #f0f0f0;
     overflow-y: auto;
-    z-index: 2;
+    z-index: 3;
     box-shadow: -25px 0px 20px -20px rgba(0,0,0,0.5);
     padding-left: 1%;
     padding-right: 1%;
     text-align: left;
-  }
-  
-  #bottom-padding{
-    padding-bottom: 1em;
   }
 
   .panel-content {
@@ -26,3 +25,10 @@
   li{
     margin-bottom: 12px;
   }
+
+  @media (max-width: 1000px){
+    .about-panel{
+       width: 98vw;
+      /*margin: 3% 0% 3% 0%;*/
+    }
+}
