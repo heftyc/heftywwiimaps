@@ -12,17 +12,23 @@ const AttackPopup = ({
   date,
   targetType,
   targetName,
+  picture,
   sources,
 }) => (
-  <div className="popup">
+  <div className="kamikaze-popup">
     <h2 className="target-name">
       {renderFlag(country)}
       {targetName}
     </h2>
     <p className="target-type">{targetType}</p>
+
+    {renderPicture(picture)}
     {renderFate(fate)}
     <p>Struck: {date}</p>
-    <div className="sources">Sources: {renderSources(sources)}</div>
+
+    <div className="sources" style={{ fontSize: "11px" }}>
+      Sources: {renderSources(sources)}
+    </div>
   </div>
 );
 const renderFlag = (country) => {
@@ -40,6 +46,15 @@ const renderFlag = (country) => {
   }
   return <img className="flag" src={imagePath} />;
 };
+
+const renderPicture = (picture) => {
+  if (picture == "") {
+    return null;
+  } else {
+    return <img className="ship-picture" src={picture}></img>;
+  }
+};
+
 const renderFate = (fate) => {
   if (fate === "Sunk") {
     return <p className="fate-sunk">Sunk</p>;
@@ -51,9 +66,9 @@ const renderFate = (fate) => {
 const renderSources = (sources) => {
   const tokens = sources.split("|");
   return (
-    <span>
+    <span className="source-text">
       {tokens.map((item, index) => (
-        <span key={index}>
+        <span key={index} className="source-text">
           {renderSource(item, index == tokens.length - 1)}
         </span>
       ))}

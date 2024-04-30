@@ -1,7 +1,14 @@
-#root, html {
+html {
   margin: 0%;
   padding: 0%;
 }
+* {
+  font-size: 15px;
+  margin: inherit auto;
+  text-align: center;
+  font-family: sans-serif;
+}
+
 body {
   margin: 0;
   padding: 0;

@@ -1,37 +1,43 @@
-* {
-    font-size: 15px;
-    margin: inherit auto;
-    text-align: center;
-    font-family: sans-serif;
+.kamikaze-popup *{
+    margin: auto;
+}
+
+.ship-picture{
+    width:500px;
+    height: auto;
+    vertical-align: middle;
 }
 
 .flag{
-    height: 19px;
+    height: 23px;
     padding-right: 5px;
 }
 .target-name{
     font-size: 30px;
+    padding: 6px;
 }
 .target-type{
-    font-size: 20px;
+    font-size: 18px;
+    padding: 6px;
 }
 .fate-sunk, .fate-damaged{
     font-size: 20px;
-    padding: 0.15em 0em;
+    padding: 2px 0em 2px 0em;
+    color: white;
 }
 
 .fate-sunk{
     background-color: red;
-    color: white;
+
 }
 .fate-damaged{
     background-color: black;
-    color: white;
 }
 
-.sources > *{
-    font-size: 13px;
+.sources * {
+    font-size: 11px;
 }
+
 
 a {
     color: blue;

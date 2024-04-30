@@ -75,7 +75,7 @@ const AboutPanel = ({ aboutToggled }) => {
         for the map data.
       </p>
       <p>
-        This map represents every known kamikaze strike on allied ships that did
+        This map represents every known kamikaze strike on Allied ships that did
         at least some damage. This damage could be very minor; in some attacks
         the plane only clipped the ship and damaged some equipment. Damaging
         near misses are also recorded, where the plane would miss its target but

@@ -34,6 +34,7 @@ const Map = () => {
       const date = e.features[0].properties["Date"];
       const targetType = e.features[0].properties["Target Type"];
       const targetName = e.features[0].properties["Target Name"];
+      const shipPicture = e.features[0].properties["Image"];
       const sources = e.features[0].properties["Sources"];
 
       const coordinates = e.features[0].geometry.coordinates.slice();
@@ -46,6 +47,7 @@ const Map = () => {
           date={date}
           targetType={targetType}
           country={country}
+          picture={shipPicture}
           sources={sources}
         />,
         popupNode
