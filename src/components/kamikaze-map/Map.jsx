@@ -6,13 +6,14 @@ import "./Map.css";
 
 mapboxgl.accessToken = import.meta.env.VITE_MAPBOX_GL_ACCESS_TOKEN;
 
-const Map = () => {
+const Map = ({ currentDateNum }) => {
   const mapContainerRef = useRef(null);
+  const mapRef = useRef(null);
   const popupRef = useRef(
     new mapboxgl.Popup({ offset: 10, closeButton: false, maxWidth: 1000 })
   );
   useEffect(() => {
-    const map = new mapboxgl.Map({
+    mapRef.current = new mapboxgl.Map({
       container: mapContainerRef.current,
       style: import.meta.env.VITE_MAPBOX_STYLE_ID,
       center: [1, 1],
@@ -22,13 +23,13 @@ const Map = () => {
       ],
     });
     const scaleControl = new mapboxgl.ScaleControl({
-      maxWidth: 200,
+      maxWidth: 250,
       unit: "nautical",
     });
-    map.addControl(scaleControl, "bottom-left");
-    map.addControl(new mapboxgl.NavigationControl(), "bottom-left");
+    mapRef.current.addControl(scaleControl, "bottom-right");
+    mapRef.current.addControl(new mapboxgl.NavigationControl(), "bottom-left");
 
-    map.on("click", "data-driven-circles-labels", (e) => {
+    mapRef.current.on("click", "data-driven-circles-labels", (e) => {
       const country = e.features[0].properties["Country"];
       const fate = e.features[0].properties["Target Status"];
       const date = e.features[0].properties["Date"];
@@ -55,17 +56,36 @@ const Map = () => {
       popupRef.current
         .setLngLat(coordinates)
         .setDOMContent(popupNode)
-        .addTo(map);
+        .addTo(mapRef.current);
     });
+
+    mapRef.current.on("load", () => {
+      updateMapFilters(mapRef.current, currentDateNum);
+    });
+
+    return () => {
+      mapRef.current.remove();
+    };
   }, []);
+
+  useEffect(() => {
+    if (mapRef.current && mapRef.current.loaded()) {
+      updateMapFilters(mapRef.current, currentDateNum);
+    }
+  }, [currentDateNum]);
+
+  const updateMapFilters = (map, num) => {
+    const dateFilter = ["<", ["to-number", ["get", "Day Value"]], num];
+    mapRef.current.setFilter("data-driven-circles", dateFilter);
+    mapRef.current.setFilter("data-driven-circles-labels", dateFilter);
+  };
 
   return (
     <div
       ref={mapContainerRef}
       style={{
         width: "100vw",
-        height: "94vh",
-
+        height: "100vh",
         left: 0,
         right: 0,
       }}

@@ -16,21 +16,21 @@ const Tutorial = () => {
         left: "50%",
         top: "8%",
         transform: "translate(-50%, 0%)",
-        maxWidth: "40%",
+        width: "600px",
 
         fontFamily: "var(--primary-font)",
 
-        background: "#efefef",
+        background: "var(--highlight-color)",
         borderStyle: "solid",
-        borderWidth: "2px",
-        borderColor: "gray",
+        borderWidth: "  1px",
+        borderColor: "black",
 
         padding: "2px",
 
         display: showMe ? "block" : "none",
       }}
     >
-      <div style={{ fontFamily: "inherit" }}>
+      <div style={{ fontFamily: "inherit", fontSize: "larger" }}>
         {" "}
         Zoom in to display ship names. Click on a ship name to display a popup
         with additional details. Currently, the data in this map is only mostly

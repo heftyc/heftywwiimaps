@@ -14,8 +14,13 @@
     text-align: left;
   }
 
+  .about-panel * {
+    font-size: large;
+  }
+
   .panel-content {
     padding: 20px;
+   
   }
 
   ul{
