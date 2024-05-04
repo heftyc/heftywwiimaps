@@ -12,7 +12,7 @@ function NavBar({ onButtonClicked }) {
   };
 
   return (
-    <div className="navBar" style={{ width: "100vw", height: "6vh" }}>
+    <div className="navBar">
       <div className="page-title">
         <a href="/" className="home-link">
           <img className="site-logo" src={siteLogo} />

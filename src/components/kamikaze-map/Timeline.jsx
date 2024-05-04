@@ -1,5 +1,9 @@
 import React, { useState, useEffect } from "react";
 import moment from "moment";
+import rewindImage from "../../assets/images/rewind.svg";
+import fastForwardImage from "../../assets/images/skip.svg";
+import playImage from "../../assets/images/play.svg";
+import pauseImage from "../../assets/images/pause.svg";
 import "./Timeline.css";
 
 /**startDate: js Date for the start of the timeline.
@@ -89,19 +93,13 @@ const Timeline = ({
       </div>
       <div className="timeline-buttons">
         <button className="timeline-rewind" onClick={handleRewind}>
-          <img src="src\assets\images\rewind.svg" />
+          <img src={rewindImage} />
         </button>
         <button className="timeline-play-pause" onClick={handlePlayPause}>
-          <img
-            src={
-              advancing
-                ? "src/assets/images/pause.svg"
-                : "src/assets/images/play.svg"
-            }
-          />
+          <img src={advancing ? pauseImage : playImage} />
         </button>
         <button className="timeline-fast-forward" onClick={handleFastForward}>
-          <img src="src\assets\images\skip.svg" />
+          <img src={fastForwardImage} />
         </button>
       </div>
     </div>

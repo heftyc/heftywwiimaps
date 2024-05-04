@@ -6,8 +6,6 @@ const AboutPanel = ({ aboutToggled }) => {
     <div
       className={"about-panel"}
       style={{
-        position: "fixed",
-        bottom: 0,
         display: aboutToggled ? "block" : "none",
       }}
     >

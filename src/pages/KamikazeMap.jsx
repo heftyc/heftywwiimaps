@@ -15,10 +15,10 @@ function KamikazeMap() {
   };
 
   return (
-    <div>
+    <div style={{ maxHeight: "100vh" }}>
       <NavBar onButtonClicked={handleAboutToggle} />
-      <Tutorial />
       <AboutPanel aboutToggled={aboutToggled} />
+      <Tutorial />
       <Timeline
         startDate={new Date("1944-10-13")}
         maxDateNum={maxDateNum}

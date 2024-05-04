@@ -1,17 +1,15 @@
   .about-panel {
-    left: 1;
-    right: 0;
-    
     width: 30vw;
-    height: 94vh;
-
-    background-color: #f0f0f0;
-    overflow-y: auto;
-    z-index: 3;
+    background-color: var(--highlight-color);
+    
+    max-height: calc(100vh - 70px);
+    overflow-y: scroll;
+    z-index: 99;
     box-shadow: -25px 0px 20px -20px rgba(0,0,0,0.5);
     padding-left: 1%;
     padding-right: 1%;
-    text-align: left;
+    float:right;
+    
   }
 
   .about-panel * {
