@@ -12,11 +12,12 @@ const Tutorial = () => {
       className="tutorial"
       style={{
         position: "absolute",
-        zIndex: 2,
+        zIndex: -1,
         left: "50%",
-        top: "8%",
+        top: "90px",
         transform: "translate(-50%, 0%)",
-        width: "600px",
+
+        maxWidth: "400px",
 
         fontFamily: "var(--primary-font)",
 

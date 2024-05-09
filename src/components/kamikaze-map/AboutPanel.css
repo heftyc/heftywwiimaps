@@ -4,7 +4,7 @@
     
     max-height: calc(100vh - 70px);
     overflow-y: scroll;
-    z-index: 99;
+    z-index: 2;
     box-shadow: -25px 0px 20px -20px rgba(0,0,0,0.5);
     padding-left: 1%;
     padding-right: 1%;
@@ -32,6 +32,5 @@
   @media (max-width: 1000px){
     .about-panel{
        width: 98vw;
-      /*margin: 3% 0% 3% 0%;*/
     }
 }

@@ -4,9 +4,10 @@
     left: 50%;
     bottom: 2%;
     transform: translate(-50%, 0%);
+    min-width: 400px;
     max-width: 40%;
-    min-width: 600px;
-    z-index: 2;
+    
+    z-index: -1;
 
     border-style: solid;
     border-width: 2px;
@@ -84,13 +85,20 @@
     margin: 5px;
 
     border: 0px;
+
+
+}
+
+.timeline-buttons > button:hover{
+    background-color: white;
+    offset: 2px;
 }
 
 .timeline-buttons img {
     margin: auto auto;
     height: 30px;
     width: auto;
-    background-color: var(--secondary-color);
+    background-color: inherit;
     
     max-width: 100%;
     max-height: 100%;
