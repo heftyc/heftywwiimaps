@@ -80,20 +80,6 @@ const Map = ({ currentDateNum }) => {
     mapRef.current.setFilter("data-driven-circles-labels", dateFilter);
   };
 
-  return (
-    <div
-      ref={mapContainerRef}
-      style={{
-        position: "absolute",
-        width: "100vw",
-        height: "100vh",
-        zIndex: -2,
-        left: 0,
-        right: 0,
-        top: 0,
-        bottom: 0,
-      }}
-    />
-  );
+  return <div className="map-container" ref={mapContainerRef} />;
 };
 export default Map;

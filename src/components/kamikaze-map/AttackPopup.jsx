@@ -16,10 +16,10 @@ const AttackPopup = ({
   sources,
 }) => (
   <div className="kamikaze-popup">
-    <h2 className="target-name">
+    <div className="target-name">
       {renderFlag(country)}
       {targetName}
-    </h2>
+    </div>
     <p className="target-type">{targetType}</p>
 
     {renderPicture(picture)}

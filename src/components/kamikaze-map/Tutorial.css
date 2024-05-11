@@ -1,0 +1,38 @@
+.tutorial{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    z-index: -1;
+    /*max-width: 400px;*/
+
+    font-family: var(--primary-font);
+    background: var(--highlight-color);
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+
+    padding: 2px;
+    margin: 2%;
+    align-self: center;
+}
+
+.tutorial-close-button{
+    border: inherit;
+    background: inherit;
+    font-family: inherit;
+    margin-top: 7px;
+    margin-bottom: 5px;
+}
+
+.tutorial-close-button:hover{
+  background-color: white;
+}
+
+@media (max-width: 700px){
+    .tutorial{
+        max-width: 100%;
+        width:calc(100% - 2px);
+        padding: 0;
+        margin: 0;
+    }
+}

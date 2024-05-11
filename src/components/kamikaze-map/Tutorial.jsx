@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./Tutorial.css";
 
 const Tutorial = () => {
   const [showMe, setShowMe] = useState(true);
@@ -11,23 +12,6 @@ const Tutorial = () => {
     <div
       className="tutorial"
       style={{
-        position: "absolute",
-        zIndex: -1,
-        left: "50%",
-        top: "90px",
-        transform: "translate(-50%, 0%)",
-
-        maxWidth: "400px",
-
-        fontFamily: "var(--primary-font)",
-
-        background: "var(--highlight-color)",
-        borderStyle: "solid",
-        borderWidth: "  1px",
-        borderColor: "black",
-
-        padding: "2px",
-
         display: showMe ? "block" : "none",
       }}
     >
@@ -38,16 +22,7 @@ const Tutorial = () => {
         complete but community contributions to the dataset will be open soon.
         {"   "}
       </div>
-      <button
-        onClick={handleClick}
-        style={{
-          border: "inherit",
-          background: "inherit",
-          fontFamily: "inherit",
-          marginTop: "7px",
-          marginBottom: "5px",
-        }}
-      >
+      <button className="tutorial-close-button" onClick={handleClick}>
         Close
       </button>
     </div>
