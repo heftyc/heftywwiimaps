@@ -49,7 +49,10 @@ const AboutPanel = ({ aboutToggled }) => {
       <hr></hr>
       <h2>About This Map</h2>
 
-      <p>&copy; 2024 Caleb Hefty. Code licensed under the MIT License.</p>
+      <p>Site &copy; 2024 Caleb Hefty. Code licensed under the MIT License.</p>
+      <p>
+        Map Data &copy; 2024 Caleb Hefty. Code licensed under the MIT License.
+      </p>
       <p>
         This map is built with{" "}
         <a href="https://react.dev/" target="_blank">
@@ -99,26 +102,9 @@ const AboutPanel = ({ aboutToggled }) => {
         descriptions of where the attack happened, or only precise to one degree
         of latitude and longitude. (Note that the area within one degree of
         latitude and longitude near Okinawa is over 4,000 square miles.) For
-        these records, I looked at additional sources to get an exact location.
-        I used the National Archives Catalog to look at ships' war diaries and
-        other reports. During the war, American warships recorded their
-        coordinate positions throughout the day in a monthly war diary. By
-        finding the entry for the day of the attack, we can look at a
-        description of the events and try to get closer to the attack's true
-        location.
-      </p>
-      <p>
-        {" "}
-        Each entry that I had to research was a unique challenge. The war diary
-        typically records the ship's position at 0800, 1200, and 2000. If the
-        attack happened close to one of these times, that position is typically
-        used. Many ships are missing war diaries for some months. Cargo ships,
-        which were often the victims of kamikaze attacks, didn't keep diaries at
-        all. In these scenarios, surrounding ships usually record observing the
-        hit, or coming to the aid of the struck ship, so we can look at those
-        ships' positions. In some cases, there are no coordinates available, but
-        a report gives a good description of the location that I translate into
-        approximate coordinates. The Notes column on the{" "}
+        these records I looked at additional sources, typically ship records
+        from the National Archives Catalog, to improve accuracy. The Notes
+        column on the{" "}
         <a
           href="https://docs.google.com/spreadsheets/d/1lCVeWthDCK-H_1LFkkHMGfZmyNYYr5mHq1ahN2rbiug/edit?usp=sharing"
           target="_blank"
