@@ -12,6 +12,8 @@ const Map = ({ currentDateNum }) => {
   const popupRef = useRef(
     new mapboxgl.Popup({ offset: 10, closeButton: false, maxWidth: 1000 })
   );
+  const [browserType, setBrowserType] = useState("");
+
   useEffect(() => {
     mapRef.current = new mapboxgl.Map({
       container: mapContainerRef.current,
@@ -63,6 +65,17 @@ const Map = ({ currentDateNum }) => {
       updateMapFilters(mapRef.current, currentDateNum);
     });
 
+    const detectBrowser = () => {
+      const browser = navigator.userAgent.toLowerCase();
+      if (
+        browser.toLowerCase().includes("firefox") ||
+        (browser.includes("Safari") && !browser.includes("Chrome"))
+      )
+        return "no-anchor";
+      return "anchor";
+    };
+    setBrowserType(`map-container-${detectBrowser()}`);
+
     return () => {
       mapRef.current.remove();
     };
@@ -80,6 +93,8 @@ const Map = ({ currentDateNum }) => {
     mapRef.current.setFilter("data-driven-circles-labels", dateFilter);
   };
 
-  return <div className="map-container" ref={mapContainerRef} />;
+  return (
+    <div className={`map-container ${browserType}`} ref={mapContainerRef} />
+  );
 };
 export default Map;
