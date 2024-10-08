@@ -1,16 +1,18 @@
 .map-container {
   position: absolute;
-  width: 100vw;
-  height: 100vh;
   z-index: -2;
   left: 0;
   right: 0;
   top: 0;
   bottom: 0;
-  }
+}
 
-  @media (max-width: 700px){
-    .map-container{
-        height: calc(100vh - 117px);
-    }
+@media (max-width: 700px) {
+  .map-container-anchor {
+    position-anchor: --timeline-anchor;
+    bottom: calc(anchor(top));
+  }
+  .map-container-no-anchor {
+    bottom: 119px;
+  }
 }
