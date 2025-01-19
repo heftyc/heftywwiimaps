@@ -14,6 +14,7 @@ const AttackPopup = ({
   targetName,
   picture,
   sources,
+  similarShip,
 }) => (
   <div className="kamikaze-popup">
     <div className="target-name">
@@ -22,7 +23,7 @@ const AttackPopup = ({
     </div>
     <p className="target-type">{targetType}</p>
 
-    {renderPicture(picture)}
+    {renderPicture(picture, similarShip)}
     {renderFate(fate)}
     <p>Struck: {date}</p>
 
@@ -47,11 +48,30 @@ const renderFlag = (country) => {
   return <img className="flag" src={imagePath} />;
 };
 
-const renderPicture = (picture) => {
+const renderPicture = (picture, similarShip) => {
   if (picture == "") {
     return null;
   } else {
-    return <img className="ship-picture" src={picture}></img>;
+    return (
+      <div className="ship-picture-container" style={{ position: "relative" }}>
+        <img className="ship-picture" src={picture} />
+        {similarShip && (
+          <div
+            style={{
+              position: "absolute",
+              bottom: "0px",
+              left: "0px",
+              color: "white",
+              backgroundColor: "rgba(0,0,0,0.4)",
+              paddingLeft: "3px",
+              paddingRight: "3px",
+            }}
+          >
+            Similar Ship Pictured
+          </div>
+        )}
+      </div>
+    );
   }
 };
 
@@ -78,7 +98,8 @@ const renderSources = (sources) => {
 
 var urlNames = [
   ["http://www.navy.gov.au/", "Australian Naval Records"],
-  ["https://catalog.archives.gov", "Ship Records"],
+  ["https://recordsearch.naa.gov.au/", "National Archives of Australia"],
+  ["https://catalog.archives.gov", "US  Ship Records"],
   ["http://www.navsource.org", "NavSource Naval History"],
   ["http://www.ibiblio.org/hyperwar", "HyperWar"],
   ["https://uboat.net", "uboat.net"],

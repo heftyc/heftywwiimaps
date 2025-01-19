@@ -37,6 +37,8 @@ const Map = ({ currentDateNum }) => {
       const targetName = e.features[0].properties["Target Name"];
       const shipPicture = e.features[0].properties["Image"];
       const sources = e.features[0].properties["Sources"];
+      const similarShip =
+        e.features[0].properties["Similar Ship Pictured"] == "Y";
 
       const coordinates = e.features[0].geometry.coordinates.slice();
 
@@ -50,6 +52,7 @@ const Map = ({ currentDateNum }) => {
           country={country}
           picture={shipPicture}
           sources={sources}
+          similarShip={similarShip}
         />,
         popupNode
       );
