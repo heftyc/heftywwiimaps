@@ -49,9 +49,9 @@ const AboutPanel = ({ aboutToggled }) => {
       <hr></hr>
       <h2>About This Map</h2>
 
-      <p>Site &copy; 2024 Caleb Hefty. Code licensed under the MIT License.</p>
+      <p>Site &copy; 2025 Caleb Hefty. Code licensed under the MIT License.</p>
       <p>
-        Map Data &copy; 2024 Caleb Hefty. Code licensed under the MIT License.
+        Map Data &copy; 2025 Caleb Hefty. Code licensed under the MIT License.
       </p>
       <p>
         This map is built with{" "}
@@ -124,12 +124,6 @@ const AboutPanel = ({ aboutToggled }) => {
         date of the attack itself and shows the ship as sunk.
       </p>
 
-      <p>
-        This map does not include the water-based suicide attacks included in
-        the Wikipedia article. I felt that they fell outside of the scope of the
-        map. Differentiating between different types of attacks would also make
-        the map harder to read. Ohka flying bomb attacks are still included.
-      </p>
       <p>
         If you want to leave a question or comment, please reach out to me at{" "}
         <u>heftywwiimaps@gmail.com</u>. If you have a chart showing the berths

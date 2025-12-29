@@ -41,6 +41,33 @@ const Map = ({ currentDateNum }) => {
       const sources = e.features[0].properties["Sources"];
       const similarShip =
         e.features[0].properties["Similar Ship Pictured"] == "Y";
+      const KIA = e.features[0].properties["Killed"];
+      const MIA = e.features[0].properties["Missing"];
+      const WIA = e.features[0].properties["Wounded"];
+      const aircraftTypes = {
+        Zekes: e.features[0].properties["Zekes"],
+        Vals: e.features[0].properties["Vals"],
+        Oscars: e.features[0].properties["Oscars"],
+        Dinahs: e.features[0].properties["Dinahs"],
+        Francis: e.features[0].properties["Francis"],
+        Kates: e.features[0].properties["Kates"],
+        Tonys: e.features[0].properties["Tonys"],
+        Bettys: e.features[0].properties["Bettys"],
+        Hamps: e.features[0].properties["Hamps"],
+        Lilies: e.features[0].properties["Lilies"],
+        Jills: e.features[0].properties["Jills"],
+        Baka: e.features[0].properties["Baka"],
+        Nates: e.features[0].properties["Nates"],
+        Nicks: e.features[0].properties["Nicks"],
+        Irvings: e.features[0].properties["Irvings"],
+        Nells: e.features[0].properties["Nells"],
+        Willows: e.features[0].properties["Willows"],
+        "Unidentified Bombers":
+          e.features[0].properties["Unidentified Bombers"],
+        "Unidentified Fighters":
+          e.features[0].properties["Unidentified Fighters"],
+        "Unidentified Planes": e.features[0].properties["Unidentified Planes"],
+      };
 
       const coordinates = e.features[0].geometry.coordinates.slice();
 
@@ -55,6 +82,10 @@ const Map = ({ currentDateNum }) => {
           picture={shipPicture}
           sources={sources}
           similarShip={similarShip}
+          KIA={KIA}
+          MIA={MIA}
+          WIA={WIA}
+          aircraftTypes={aircraftTypes}
         />,
         popupNode
       );

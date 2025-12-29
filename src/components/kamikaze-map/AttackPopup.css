@@ -1,65 +1,97 @@
-.kamikaze-popup *{
-    margin: auto;
+.kamikaze-popup * {
+  margin: auto;
 }
 
-.ship-picture{
-    width:500px;
-    height: auto;
-    vertical-align: middle;
+.ship-picture {
+  width: 500px;
+  height: auto;
+  vertical-align: middle;
 }
 
-
-@media (max-width: 700px){
-    .kamikaze-popup{
-        width: 270px;
-    }
-    .ship-picture{
-        width: 270px;
-    }
-    .target-name{
-        line-height: 26px;
-    }
+@media (max-width: 700px) {
+  .kamikaze-popup {
+    width: 270px;
+  }
+  .ship-picture {
+    width: 270px;
+  }
+  .target-name {
+    line-height: 26px;
+  }
 }
 
-.flag{
-    height: 23px;
-    padding-right: 5px;
+.flag {
+  height: 23px;
+  padding-right: 5px;
 }
-.target-name{
-    font-size: 27px;
-    padding: 6px;
-    font-family: var(--primary-font);
-    font-weight: 500;
+.target-name {
+  font-size: 27px;
+  padding: 6px;
+  font-family: var(--primary-font);
+  font-weight: 500;
 }
-.target-type{
-    font-size: 18px;
-    padding: 6px;
+.target-type {
+  font-size: 23px;
+  padding: 6px;
 }
-.fate-sunk, .fate-damaged{
-    font-size: 20px;
-    padding: 2px 0em 2px 0em;
-    color: white;
+.fate-sunk,
+.fate-damaged {
+  font-size: 23px;
+  padding: 2px 0em 2px 0em;
+  color: white;
 }
 
-.fate-sunk{
-    background-color: red;
-
+.fate-sunk {
+  background-color: red;
 }
-.fate-damaged{
-    background-color: black;
+.fate-damaged {
+  background-color: black;
+}
+
+.struck-date {
+  font-size: 20px;
+}
+
+.casualties-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 2px;
+}
+
+.casualties-item {
+  font-size: 16px;
+  margin: 0;
+}
+
+.aircraft-types {
+  margin: 8px 0;
+  padding: 6px;
+  text-align: center;
+}
+
+.aircraft-types-label {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.aircraft-types-sentence {
+  font-size: 16px;
+}
+
+.aircraft-type-with-tooltip {
 }
 
 .sources * {
-    font-size: 11px;
+  font-size: 11px;
 }
 
-
 a {
-    color: blue;
-    text-decoration: underline;
-  }
-  
-  a:visited {
-    color: purple;
-  }
-  
+  color: blue;
+  text-decoration: underline;
+}
+
+a:visited {
+  color: purple;
+}

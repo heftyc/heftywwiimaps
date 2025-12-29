@@ -18,8 +18,7 @@ const Tutorial = () => {
       <div style={{ fontFamily: "inherit", fontSize: "larger" }}>
         {" "}
         Zoom in to display ship names. Click on a ship name to display a popup
-        with additional details. Currently, the data in this map is only mostly
-        complete but community contributions to the dataset will be open soon.
+        with additional details.
         {"   "}
       </div>
       <button className="tutorial-close-button" onClick={handleClick}>
