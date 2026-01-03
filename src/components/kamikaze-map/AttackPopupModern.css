@@ -1,0 +1,202 @@
+/* Conservative historical styling for AttackPopup */
+/* Import this file after AttackPopup.css to apply historical styling */
+
+.kamikaze-popup {
+  background-color: #fefcf8;
+  border-radius: 3px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15), 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1.5px solid #5a7d9a;
+  padding: 14px;
+  background-image: 
+    linear-gradient(rgba(90, 125, 154, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(90, 125, 154, 0.03) 1px, transparent 1px);
+  background-size: 16px 16px;
+}
+
+.target-name {
+  background: linear-gradient(135deg, #1e3a5f 0%, #2c5282 100%);
+  color: #ffffff;
+  border-radius: 2px;
+  padding: 7px 11px;
+  margin-bottom: 8px;
+  border: 1px solid #152d47;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.2), 0 2px 4px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.target-type {
+  color: #2d3748;
+  font-weight: 500;
+  margin: 5px 0 7px 0;
+  padding: 5px 9px;
+  background-color: #e8f4f8;
+  border-radius: 2px;
+  border-left: 3px solid #2c7da0;
+  border-top: 1px solid #b8d4e3;
+  border-bottom: 1px solid #b8d4e3;
+  border-right: 1px solid #b8d4e3;
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.6);
+}
+
+.ship-picture-container {
+  border-radius: 2px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12), inset 0 1px 1px rgba(0, 0, 0, 0.05);
+  margin: 9px 0;
+  border: 1.5px solid #5a7d9a;
+  background-color: #e8f4f8;
+  padding: 2px;
+}
+
+.ship-picture {
+  display: block;
+  border-radius: 0;
+}
+
+.fate-sunk {
+  background: linear-gradient(135deg, #c53030 0%, #9b2c2c 100%);
+  color: #ffffff;
+  border-radius: 2px;
+  padding: 5px 11px;
+  margin: 7px 0;
+  border: 1px solid #742a2a;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  font-size: 13px;
+  box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.2), 0 2px 3px rgba(197, 48, 48, 0.3);
+}
+
+.fate-damaged {
+  background: linear-gradient(135deg, #4a5568 0%, #2d3748 100%);
+  color: #ffffff;
+  border-radius: 2px;
+  padding: 5px 11px;
+  margin: 7px 0;
+  border: 1px solid #1a202c;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  font-size: 13px;
+  box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.15), 0 2px 3px rgba(0, 0, 0, 0.2);
+}
+
+.casualties-row {
+  background: linear-gradient(135deg, #fed7d7 0%, #fc8181 100%);
+  border-radius: 2px;
+  padding: 7px 11px;
+  margin: 7px 0;
+  border: 1px solid #f56565;
+  box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.4), 0 1px 2px rgba(252, 129, 129, 0.2);
+}
+
+.casualties-item {
+  color: #742a2a;
+  font-weight: 600;
+  padding: 3px 6px;
+  background-color: #ffffff;
+  border-radius: 2px;
+  border: 1px solid #fc8181;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.aircraft-types {
+  background: linear-gradient(135deg, #c6f6d5 0%, #68d391 100%);
+  border-radius: 2px;
+  padding: 7px 11px;
+  margin: 7px 0;
+  border: 1px solid #48bb78;
+  box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.4), 0 1px 2px rgba(104, 211, 145, 0.2);
+}
+
+.aircraft-types-label {
+  color: #22543d;
+  font-weight: 600;
+  margin-bottom: 3px;
+  display: block;
+  letter-spacing: 0.2px;
+}
+
+.aircraft-types-sentence {
+  color: #2d3748;
+  line-height: 1.5;
+}
+
+.struck-date {
+  background: linear-gradient(135deg, #fef5e7 0%, #fbd38d 100%);
+  border-radius: 2px;
+  padding: 6px 11px;
+  margin: 7px 0;
+  color: #744210;
+  font-weight: 500;
+  border-left: 3px solid #d69e2e;
+  border-top: 1px solid #f6ad55;
+  border-bottom: 1px solid #f6ad55;
+  border-right: 1px solid #f6ad55;
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.6), 0 1px 2px rgba(214, 158, 46, 0.2);
+}
+
+.sources {
+  background: linear-gradient(135deg, #e6fffa 0%, #b2f5ea 100%);
+  border-radius: 2px;
+  padding: 7px 11px;
+  margin-top: 10px;
+  border-top: 2px solid #38b2ac;
+  border-left: 1px solid #81e6d9;
+  border-right: 1px solid #81e6d9;
+  border-bottom: 1px solid #81e6d9;
+  color: #234e52;
+  line-height: 1.5;
+  box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.4), 0 1px 2px rgba(56, 178, 172, 0.2);
+}
+
+.sources a {
+  color: #1e3a5f;
+  text-decoration: underline;
+  transition: color 0.15s ease;
+  font-weight: 500;
+}
+
+.sources a:hover {
+  color: #2c5282;
+}
+
+.sources a:visited {
+  color: #553c9a;
+}
+
+.flag {
+  height: 19px;
+  width: auto;
+  padding-right: 0;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.3));
+  border-radius: 1px;
+  flex-shrink: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 700px) {
+  .kamikaze-popup {
+    padding: 14px;
+    border-radius: 2px;
+  }
+
+  .target-name {
+    padding: 8px 12px;
+    border-radius: 2px;
+  }
+
+  .ship-picture-container {
+    border-radius: 2px;
+  }
+}
+
+/* Subtle transitions for interactive elements */
+.kamikaze-popup * {
+  transition: color 0.15s ease, background-color 0.15s ease;
+}
+

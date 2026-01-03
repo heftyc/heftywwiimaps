@@ -7,6 +7,19 @@
   bottom: 0;
 }
 
+/* Constrain Mapbox popups to viewport to prevent page scrolling */
+.mapboxgl-popup {
+  max-width: calc(100vw - 20px) !important;
+  max-height: calc(100vh - 20px) !important;
+}
+
+.mapboxgl-popup-content {
+  max-width: 100% !important;
+  max-height: calc(100vh - 40px) !important;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
 @media (max-width: 700px) {
   .map-container-anchor {
     position-anchor: --timeline-anchor;

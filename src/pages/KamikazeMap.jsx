@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Map from "../components/kamikaze-map/Map.jsx";
 import NavBar from "../components/NavBar";
 import AboutPanel from "../components/kamikaze-map/AboutPanel.jsx";
@@ -9,6 +9,15 @@ function KamikazeMap() {
   const [maxDateNum] = useState(305);
   const [currentDateNum, setCurrentDateNum] = useState(maxDateNum);
   const [aboutToggled, setAboutToggled] = useState(false);
+
+  // Prevent body scrolling when on map page
+  useEffect(() => {
+    const originalOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = originalOverflow;
+    };
+  }, []);
 
   const handleAboutToggle = () => {
     setAboutToggled((previousState) => !previousState);

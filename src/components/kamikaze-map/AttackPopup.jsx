@@ -104,46 +104,75 @@ const renderCasualties = (KIA, MIA, WIA) => {
 };
 
 const getAircraftTypeName = (type, quantity) => {
+  // Map aircraft type to its exact designation (for tooltips)
+  const designationMap = {
+    Zekes: "Mitsubishi A6M Navy Type Zero Carrier Fighter",
+    Vals: "Aichi D3A Navy Type 99 Carrier Bomber",
+    Oscars: "Nakajima Ki-43 Hayabusa Army Type 1 Fighter",
+    Dinahs: "Mitsubishi Ki-46-III-Kai Army Type 100 Air Defence Fighter",
+    Franceses: "Yokosuka P1Y1 Ginga Navy Land-Based Bomber",
+    Kates: "Nakajima B5N Navy Type 97 Carrier Attack Bomber",
+    Tonys: "Kawasaki Ki-61 Hien Army Type 3 Fighter",
+    Bettys: "Mitsubishi G4M Navy Type 1 Land-based Attack Aircraft",
+    Hamps: "Mitsubishi A6M Navy Type Zero Carrier Fighter",
+    Lilies: "Kawasaki Ki-48 Army Type 99 Twin-engined Light Bomber",
+    Jills: "Nakajima B6N Tenzan Navy Carrier Torpedo Bomber",
+    Bakas: "Yokosuka MXY-7 Ohka",
+    Nates: "Nakajima Ki-27 Army Type 97 Fighter",
+    Nicks: "Kawasaki Ki-45 Toryu Army Type 2 Two-Seat Fighter",
+    Irvings: "Nakajima J1N1-S Gekko",
+    Nells: "Mitsubishi G3M Navy Type 96 Land-based Attack Aircraft",
+    Willow: "Yokosuka K5Y1",
+    Sonias: "Mitsubishi Ki-51 Army Type 99 Assault Plane",
+    Judies: "Yokosuka D4Y Suisei Navy Carrier Dive bomber",
+    Myrts: "Nakajima C6N Saiun Navy Carrier Reconnaissance Plane",
+    Tojos: "Nakajima Ki-44 Shoki Army Type 2 Single-Seat Fighter",
+
+    // Other mappings will be added later
+  };
+
   // Return singular form if quantity is 1, otherwise return plural form
+  let displayName;
   if (quantity === 1) {
     const singularMap = {
       Zekes: "Zeke",
       Vals: "Val",
       Oscars: "Oscar",
       Dinahs: "Dinah",
-      Francis: "Francis",
+      Franceses: "Frances",
       Kates: "Kate",
       Tonys: "Tony",
       Bettys: "Betty",
       Hamps: "Hamp",
       Lilies: "Lily",
       Jills: "Jill",
-      Baka: "Baka",
+      Bakas: "Baka",
       Nates: "Nate",
       Nicks: "Nick",
       Irvings: "Irving",
       Nells: "Nell",
       Willows: "Willow",
+      Sonias: "Sonia",
+      Judies: "Judy",
+      Myrts: "Myrt",
+      Tojos: "Tojo",
       "Unidentified Bombers": "Unidentified Bomber",
       "Unidentified Fighters": "Unidentified Fighter",
       "Unidentified Planes": "Unidentified Plane",
     };
-    return singularMap[type] || type;
+    displayName = singularMap[type] || type;
+  } else {
+    displayName = type;
   }
-  return type;
-};
 
-const getAircraftDesignation = (type) => {
-  // Map aircraft type to its exact designation (for tooltips)
-  const designationMap = {
-    Zekes: "Mitsubishi A6M Navy Type Zero Carrier Fighter",
-    Zeke: "Mitsubishi A6M Navy Type Zero Carrier Fighter",
-    Vals: "Aichi D3A Navy Type 99 Carrier Bomber",
-    Kate: "Nakajima B5N Navy Type 97 Carrier Attack Bomber",
-    Kates: "Nakajima B5N Navy Type 97 Carrier Attack Bomber",
-    // Other mappings will be added later
+  // Get designation from either original type or display name
+  const designation =
+    designationMap[type] || designationMap[displayName] || null;
+
+  return {
+    name: displayName,
+    designation: designation,
   };
-  return designationMap[type] || null;
 };
 
 const renderAircraftTypes = (aircraftTypes) => {
@@ -168,20 +197,20 @@ const renderAircraftTypes = (aircraftTypes) => {
 
   // Render aircraft type with tooltip
   const renderAircraftType = (aircraft, index) => {
-    const displayType = getAircraftTypeName(aircraft.type, aircraft.quantity);
-    const designation =
-      getAircraftDesignation(aircraft.type) ||
-      getAircraftDesignation(displayType);
+    const { name, designation } = getAircraftTypeName(
+      aircraft.type,
+      aircraft.quantity
+    );
 
     return (
       <span key={index}>
         {aircraft.quantity}{" "}
         {designation ? (
           <span title={designation} className="aircraft-type-with-tooltip">
-            {displayType}
+            {name}
           </span>
         ) : (
-          displayType
+          name
         )}
       </span>
     );
